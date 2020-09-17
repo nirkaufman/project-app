@@ -1,0 +1,11 @@
+<p>user works!</p>
+
+<ng-container *ngIf="(user$ | async) as user; else loadingUser">
+    <pre>{{ user | json }}</pre>
+</ng-container>
+
+<ng-template #loadingUser>
+    <app-spinner></app-spinner>
+</ng-template>
+
+
